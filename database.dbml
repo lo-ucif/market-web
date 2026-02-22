@@ -1,0 +1,47 @@
+Table products {
+  id integer [primary key]
+  name varchar
+  price decimal
+  quantity integer
+  description varchar
+  image varchar
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+Table users {
+  id integer [primary key]
+  firstName varchar
+  lastName varchar
+  phone varchar
+  email varchar
+}
+
+Table wilayas {
+  id integer [primary key]
+  name varchar
+  deliveryOfficePrice decimal
+  deliveryHomePrice decimal
+}
+
+Table carts {
+  id integer [primary key]
+  userId integer [ref: > users.id]
+}
+
+Table cart_items {
+  id integer [primary key]
+  cartId integer [ref: > carts.id]
+  productId integer [ref: > products.id]
+  quantity integer
+}
+
+Table orders {
+  id integer [primary key]
+  userId integer [ref: > users.id]
+  deliveryType varchar
+  deliveryPrice decimal
+  totalPrice decimal
+  status varchar
+  createdAt timestamp
+}
