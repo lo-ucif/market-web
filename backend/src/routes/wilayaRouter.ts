@@ -8,9 +8,9 @@ import {
 
 const router = express.Router();
 
-router.get("/", getWilayas);
-router.post("/", createWilaya);
-router.put("/:id", updateWilaya);
-router.delete("/:id", deleteWilaya);
+router.post("/", createWilaya); // إضافة ولاية
+router.get("/", getWilayas); // جلب كل الولايات
+router.put("/:id", updateWilaya); // تعديل الاسم أو أسعار Office/Home
+router.delete("/:id", deleteWilaya); // حذف ولاية
 
 export default router;
