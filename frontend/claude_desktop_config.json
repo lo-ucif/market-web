@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\Ahmed Loucif\\Desktop\\coding\\Project web\\market-web\\frontend\\market-web"
+      ]
+    }
+  }
+}
